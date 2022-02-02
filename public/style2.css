@@ -1,0 +1,263 @@
+@font-face {
+  font-family: "horta";
+  src: url("./horta.otf");
+}
+@font-face {
+  font-family: "discordFont";
+  src: url("./Uni_Sans_Heavy.otf");
+}
+@font-face {
+  font-family: "mcFont";
+  src: url("./mc.otf");
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: black;
+  margin: 0;
+  width: 1920;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.header {
+  height: 400px;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.navbar {
+  height: 85px;
+  margin: auto;
+  text-align: center;
+  color: whitesmoke;
+  background-color: #202020;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  border-color: #1b1b1b;
+  align-items: center;
+  position: relative;
+}
+
+.navbar2 {
+  height: 90px;
+  text-align: center;
+  color: whitesmoke;
+  background-color: #202020;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  border-color: #1b1b1b;
+  align-items: center;
+  position: relative;
+}
+
+.navbarT {
+  display: table;
+  margin: 0 auto;
+}
+
+.navbarItem li {
+  list-style-type: none;
+  display: inline;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+}
+
+.navbarItem button {
+  font-size: 40px;
+  text-decoration: none;
+  text-align: center;
+  background: none;
+  border: none;
+  color: lightgray;
+  font-family: horta;
+}
+.navbarItem button:hover, .navbarItem Button:focus{
+  color: whitesmoke;
+}
+
+.active button {
+  color: white;
+  text-decoration: underline;
+}
+
+.middleNav button {
+  font-size: 60px;
+}
+
+.mainLogo {
+  padding-top: 20px;
+  height: 175px;
+  transform: scale(1);
+  animation: pulse 3s infinite;
+  position: absolute;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+  z-index: 10;
+  margin: auto;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logoDiv {
+  height: 275px;
+  position: relative;
+  width: 1920px;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
+.logoBack {
+  background-image: url("https://assets.darklordbazz.com/img/shottyAssets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateY(0px) translateX(-50%); 
+  }
+  50% {
+    transform: translateY(5px) translateX(-50%);
+  }
+  100% {
+    transform: translateY(0px) translateX(-50%);
+  }
+}
+
+.motd2 {
+  margin: 0;
+  padding: 6px;
+  font-size: 35px;
+  font-family: horta;
+  text-align: center;
+  color: lightgray;
+}
+
+.motd {
+  margin: 0%;
+  font-size: 30px;
+  font-family: horta;
+  text-align: center;
+  color: lightgray;
+}
+
+.discord {
+  float: left;
+  color: lightgray;
+  text-decoration: none;
+  margin: 100px;
+  padding: 10px;
+  height: 75px;
+  position: absolute;
+  left:200px;
+  animation: discordB 0.25s;
+  animation-fill-mode: forwards;
+  border-radius: 25px;
+  font-family: discordFont;
+}
+
+@keyframes discordA {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    background-color: rgba(255, 0, 0, 0);
+  }
+  100% {
+    transform: translateY(0px) translateX(7px);
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+}
+
+@keyframes discordB {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+  100% {
+    transform: translateY(0px) translateX(-7px);
+    background-color: rgba(255, 0, 0, 0);
+  }
+}
+
+.discord:hover {
+  border-radius: 25px;
+  animation: discordA 1s;
+  animation-fill-mode: forwards;
+}
+
+.discordIco {
+  margin-right: 5px;
+  height: 75px;
+  float: left;
+}
+
+.discordContent {
+  float: left;
+  text-decoration: none;
+  margin: 0;
+  padding: 10px 0;
+  text-align: left;
+  color: lightgray;
+}
+
+.discordJoin {
+  font-size: 25px;
+}
+
+.discordCount {
+  font-size: 17px;
+}
+
+.minecraft {
+  margin: 100px;
+  float: right;
+  color: black;
+  text-decoration: none;
+  right: 200px;
+  padding: 10px;
+  height: 75px;
+  position: absolute;
+  border-radius: 25px;
+  font-family: mcFont;
+  text-transform: uppercase;
+}
+
+.minecraftIco {
+  margin-left: 5px;
+  height: 75px;
+  float: right;
+}
+
+.minecraftContent {
+  float: right;
+  text-decoration: none;
+  margin: 0;
+  padding: 10px 0;
+  text-align: right;
+  color: lightgray;
+}
+
+.minecraftIP {
+  font-size: 23px;
+}
+
+.mineraftCount {
+  font-size: 15px;
+}
+
+.main {
+  position: relative;
+  margin: 100px;
+  color: whitesmoke;
+  width: 1600px;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
