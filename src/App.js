@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import Staff from "./Components/Staff/Staff";
 import Status from "./Components/Status/Status";
@@ -25,6 +26,7 @@ function App() {
             <Route path="" element={<Home />} />
           </Routes>
         </div>
+        <Footer/>
       </Router>
     );
   }
