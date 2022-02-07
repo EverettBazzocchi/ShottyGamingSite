@@ -6,8 +6,6 @@ import Staff from "./Components/Staff/Staff";
 import Status from "./Components/Status/Status";
 import Apply from "./Components/Staff/Apply/Apply";
 
-import DiscordLink from "./hooks/DiscordLink"
-
 import useWindowDimensions from "./hooks/useWindowDimensions";
 
 function App() {
@@ -24,7 +22,6 @@ function App() {
             <Route path="/status" element={<Status />} />
             <Route path="/staff/apply" exact element={<Apply />} />
             <Route path="/staff" exact element={<Staff />} />
-            <Route path="/discord" exact element={<DiscordLink />} />
             <Route path="" element={<Home />} />
           </Routes>
         </div>
