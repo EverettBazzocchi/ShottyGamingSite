@@ -1,5 +1,7 @@
 import React from "react";
 
+import List from "../../OnlineStaffComponents/List"
+
 const Layout = (props) => {
   var name;
   switch (props.name) {
@@ -39,7 +41,7 @@ const Layout = (props) => {
     playerList = "No Staff Online";
   } else
     playerList = props.players.map((players) => {
-      return <div>{players}</div>;
+      return (< List player={players}/>);
     });
 
   if (props.players.includes("offline")) {

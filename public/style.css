@@ -321,7 +321,6 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #cccccc;
-  -webkit-text-stroke: 1px #505050;
   font-family: horta;
   font-size: 24px;
   background-color: #303030;
@@ -385,7 +384,6 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #cccccc;
-  -webkit-text-stroke: 1px #505050;
 }
 .staffOnline::-webkit-scrollbar {
   width: 4px;
@@ -453,4 +451,85 @@ body {
   font-size: 15px;
   text-align: left;
   padding: 20px;
+}
+
+.rankowner {
+  background-color: #AA0000;
+  border: 0px solid;
+  border-radius: 2px;
+  width: 150px;
+  margin: 10px auto;
+  padding-top: 4px;
+  padding-bottom: 0;
+  color: black;
+}
+
+.rankmod {
+  background-color: #55FFFF;
+  border: 0px solid;
+  border-radius: 2px;
+  width: 150px;
+  margin: 10px auto;
+  padding-top: 4px;
+  padding-bottom: 0;
+  color: black;
+}
+
+.ranksrmod {
+  background-color: #0000AA;
+  border: 0px solid;
+  border-radius: 2px;
+  width: 150px;
+  margin: 10px auto;
+  padding-top: 4px;
+  padding-bottom: 0;
+  color: black;
+}
+
+.rankadmin {
+  background-color: #FF5555;
+  border: 0px solid;
+  border-radius: 2px;
+  width: 150px;
+  margin: 10px auto;
+  padding-top: 4px;
+  padding-bottom: 0;
+  color: black;
+}
+
+.staffPage {
+  background-color: #303030;
+  text-align: center;
+  border: 1px solid #999999;
+  border-radius: 2px;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.staffPage h1 {
+  margin: 0;
+  padding: 15px;
+  height: 40px;
+  background-color: #202020;
+  border-bottom: 1px solid #999999;
+  border-top: 1px solid #999999;
+  font-family: horta;
+}
+
+.mod, .owner, .srmod, .admin {
+  display: flex;
+}
+.mod > div, .owner > div, .srmod > div, .admin > div {
+  font-family: horta;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin: 20px auto;
+  padding: 5px;
+  display: inline-block;
+  text-align: center;
+}
+.caption {
+  display: block;
 }
