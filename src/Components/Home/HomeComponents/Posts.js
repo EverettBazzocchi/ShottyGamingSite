@@ -11,21 +11,20 @@ const Posts = () => {
       }
     );
   });
-  console.log(posts);
 
   return (
-    <div>
+    <>
       {posts.map((post) => {
         return (
           <PostFormat
-            title = {post.title}
-            author = {post.author}
-            message = {post.message}
-            date = {post.date}
+            title={post.title}
+            author={post.author}
+            message={post.message}
+            date={post.date}
           />
         );
       })}
-    </div>
+    </>
   );
 };
 
