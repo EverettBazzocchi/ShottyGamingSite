@@ -13,7 +13,7 @@ const Posts = () => {
   });
 
   return (
-    <>
+    <div className="Posts">
       {posts.map((post) => {
         return (
           <PostFormat
@@ -24,7 +24,7 @@ const Posts = () => {
           />
         );
       })}
-    </>
+    </div>
   );
 };
 
