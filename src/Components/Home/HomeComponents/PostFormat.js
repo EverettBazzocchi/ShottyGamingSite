@@ -7,7 +7,7 @@ const PostFormat = (props) => {
 
       <div className="postHeader">
         <span className="author">{props.author}</span>
-        <span className="date">about {props.date.toString()}</span>
+        <span className="date">{props.date.toString()}</span>
       </div>
 
       <div className="message">{props.message}</div>
