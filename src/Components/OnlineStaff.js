@@ -20,11 +20,13 @@ const OnlineStaff = () => {
         <p className="staffHomeList">
           {servers.map((server) => {
             if (server.players == "[]" || server.players == "offline") {
-              if ((run === 1)) {
-                run = 'nothing';
-                return <div class="staffHomeList">No Staff Online</div>;
-              } else return;
+              run = run+1;
+              return;
             }
+            if ((run === 8)) {
+              run = 'nothing';
+              return <div class="staffHomeList">No Staff Online</div>;
+            } else 
             return server.players.map((players) => {
               var player = players.toString();
               console.log(player);
