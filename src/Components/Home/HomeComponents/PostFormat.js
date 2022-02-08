@@ -10,7 +10,7 @@ const PostFormat = (props) => {
         <span className="date">{props.date.toString()}</span>
       </div>
 
-      <div className="message">{props.message}</div>
+      <pre className="message">{props.message}</pre>
     </div>
   );
 };
