@@ -524,8 +524,8 @@ body {
   padding: 15px;
   height: 40px;
   background-color: #202020;
-  border-bottom: 1px solid #999999;
-  border-top: 1px solid #999999;
+  border-bottom: 0.1px solid #191919;
+  border-top: 0.1px solid #191919;
   font-family: horta;
 }
 
