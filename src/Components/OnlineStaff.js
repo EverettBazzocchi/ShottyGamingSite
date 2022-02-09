@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Axios from "axios";
 
-import List from './OnlineStaffComponents/List'
+import List from "./OnlineStaffComponents/List";
 
 var playerList;
 const OnlineStaff = () => {
@@ -19,21 +19,25 @@ const OnlineStaff = () => {
     <div className="onlineStaff">
       <h1>Staff Online</h1>
       <NavLink end to="/status" style={{ textDecoration: "none" }}>
-        <p className="staffHomeList">
+        <div className="staffHomeList">
           {servers.map((server) => {
-            if (server.players == "[]" || server.players == "offline") {
+            if (
+              run < 8 &&
+              (server.players == "[]" || server.players == "offline")
+            ) {
               run = run + 1;
+              if (run === 8) {
+                run = "nothing";
+                return <div className="staffHomeList">No Staff Online</div>;
+              }
               return;
-            }
-            if (run === 8) {
-              run = "nothing";
-              return <div class="staffHomeList">No Staff Online</div>;
-            } else
+            } else {
               return server.players.map((players) => {
-                return (< List player={players}/>);
+                return <List player={players} />;
               });
+            }
           })}
-        </p>
+        </div>
       </NavLink>
     </div>
   );

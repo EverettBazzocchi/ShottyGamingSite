@@ -323,6 +323,7 @@ body {
 }
 
 .staffHomeList {
+  margin-top: 10px;
   padding-left: 5px;
   text-transform: uppercase;
   text-decoration: none;
@@ -464,6 +465,7 @@ body {
   width: 600px;
   flex-direction: column-reverse;
   margin: auto;
+  font-family: Helvetica;
 }
 
 .rankowner {
@@ -566,11 +568,11 @@ body {
   bottom: 0;
 }
 
-
 pre {
- white-space: pre-wrap;     
- white-space: -moz-pre-wrap;
- white-space: -pre-wrap;    
- white-space: -o-pre-wrap;
- word-wrap: break-word;
+  font-family: Helvetica;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
 }
