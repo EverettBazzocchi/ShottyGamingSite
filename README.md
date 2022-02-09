@@ -6,17 +6,17 @@ The front end site for Shotty Gamings minecraft server website
 
 
 ## Upcoming Features!
- - Staff Profiles!
-   - Amount of bans/mutes/kicks issued
-   - about
-   - favorite server
-   - How long as a staff member
+ - [ ] Staff Profiles!
+   - [ ] Amount of bans/mutes/kicks issued
+   - [ ] about
+   - [ ] favorite server
+   - [ ] How long as a staff member
   
- - Server Profiles
-   - Server Status
-   - Player Counts
-   - View Chat
-   - See online staff
-   - Amount of bans/mutes/kicks taken place on that specific server
+ - [ ] Server Profiles
+   - [ ] Server Status
+   - [ ] Player Counts
+   - [ ] View Chat
+   - [ ] See online staff
+   - [ ] Amount of bans/mutes/kicks taken place on that specific server
  
  
