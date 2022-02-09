@@ -22,7 +22,7 @@ The front end site for Shotty Gamings minecraft server website
 
    - Server Status <br>
    - Player Counts <br>
-   - View Chat <br>
+   - Chat Viewer <br>
    - See online staff <br>
    - Amount of bans/mutes/kicks taken place on that specific server <br>
  
