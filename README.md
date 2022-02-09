@@ -14,10 +14,12 @@ The front end site for Shotty Gamings minecraft server website
   
 <details><summary> ### Server Profiles</summary>
 <p>
+ 
    - Server Status <br>
    - Player Counts <br>
    - View Chat <br>
    - See online staff <br>
    - Amount of bans/mutes/kicks taken place on that specific server <br>
+ 
 </p>
 </details>
