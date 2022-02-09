@@ -12,7 +12,7 @@ The front end site for Shotty Gamings minecraft server website
    - favorite server
    - How long as a staff member
   
-<details><summary>Server Profiles</summary>
+<details><summary> ### Server Profiles</summary>
 <p>
    - Server Status <br>
    - Player Counts <br>
