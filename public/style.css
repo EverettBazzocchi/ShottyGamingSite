@@ -571,7 +571,7 @@ pre {
   border-radius: 2px;
 }
 
-.staffSideBar {
+.staffSideBar{
   box-sizing: border-box;
   margin: auto;
   float: left;
@@ -584,14 +584,37 @@ pre {
 	padding:0;
 }
 
-.staffSideBar li {
-  padding: 15px 25px;
+.staffSideBar button {
+  padding: 10px 25px;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: whitesmoke;
+  font-size: 18px;
+  width: 100%;
+}
+.staffSideBar button:hover {
+  background-color: #202020;
+  color:gray;
+}
+
+.active .staffSideButton {
+  background-color: #252525;
+}
+
+.staffSideBar NavLink {
+  text-decoration: none;
 }
 
 .staffSideBarTitle {
+  color: whitesmoke;
+  padding: 10px 25px;
   font-size: 20px;
   border-bottom: 1px solid #999999;
   border-top: 1px solid #999999;
+  font-family: helvetica;
+  font-weight: bold;
+  background-color: #202020;
 }
 
 .profile {
@@ -605,3 +628,90 @@ pre {
   border-left: 1px solid #999999;
   border-right: 1px solid #999999;
 }
+
+fieldset {
+  position: relative;
+  padding: 5px;
+  margin: 15px;
+  width: 100px;
+}
+
+legend {
+  text-transform: uppercase;
+}
+
+.staffProfile {
+}
+
+.bkm {
+  display: flex;
+  position: relative;
+  left: 45px;
+  width: 450px;
+}
+
+.bkmField {
+  position: relative;
+  width: 50px;
+  margin: 25px;
+  margin:auto;
+}
+
+.bkmField legend {
+  position: relative;
+  font-size: 15px;
+}
+
+.usernameField {
+  position: relative;
+  float: left;
+  font-size: 25px;
+  top: 5px;
+  left: 5px;
+  border: 1px solid #999999;
+  width: 195px;
+  height: 65vh;
+}
+.staffPageUsername {
+  position: relative;
+  border-bottom: 1px solid #999999;
+  background-color: #202020;
+  padding: 25px;
+}
+.staffPageSkin {
+  padding: 25px;
+  padding-top: 10px;
+  position: relative;
+  margin: auto;
+  height: 40vh;
+}
+
+.favservField {
+  position: absolute;
+  float: right;
+  right: 25px;
+  width: 200px;
+  top: 75px;
+}
+
+.aboutField {
+  width: 400px;;
+  height: 390px;
+  float: left;
+  left: 50px;
+  top:15px;
+}
+.utimeField {
+  position: absolute;
+  float: right;
+  right:25px;
+  top:10px;
+  width: 200px;
+  text-align: center;
+}
+
+.utimeField legend{
+  text-align: left;
+
+}
+

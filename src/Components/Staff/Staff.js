@@ -20,10 +20,6 @@ const Staff = () => {
       <div className="profile">
         <Routes>
           {staff.map((staff) => {
-            if (staff.username === ".darklordbazz") return;
-            if (staff.username === "pearlrebel") return;
-            if (staff.username === "dopey_02") return;
-            if (staff.username === "workedgolem") return;
             var link = `/${staff.username}`;
             return (
               <Route
