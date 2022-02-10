@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import Staff from "./Components/Staff/Staff";
 import Status from "./Components/Status/Status";
-import Apply from "./Components/Staff/Apply/Apply";
 
 import useWindowDimensions from "./hooks/useWindowDimensions";
 
@@ -20,10 +20,9 @@ function App() {
           <Header />
           <div className="main">
             <Routes>
-              <Route path="/status" element={<Status />} />
-              <Route path="/staff/apply" exact element={<Apply />} />
-              <Route path="/staff" exact element={<Staff />} />
-              <Route path="" element={<Home />} />
+              <Route path="/status/*" element={<Status />} />
+              <Route path="/staff/*" element={<Staff />} />
+              <Route path="*" element={<Home />} />
             </Routes>
           </div>
           <Footer />
