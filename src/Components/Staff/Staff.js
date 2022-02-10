@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import { Route, Routes } from "react-router-dom";
+
+import SideBar from "./StaffComponents/SideBar";
+import StaffPage from "./StaffComponents/StaffPage";
 
 const Staff = () => {
   const [staff, setStaff] = useState([]);
@@ -12,74 +16,23 @@ const Staff = () => {
   });
   return (
     <div className="staffPage">
-      <div>
-        <h1>OWNER</h1>
-        <div className="owner">
+      <SideBar staff={staff} />
+      <div className="profile">
+        <Routes>
           {staff.map((staff) => {
-            if (
-              staff.rank.toLowerCase() === "owner" &&
-              staff.username === "darklordbazz_"
-            ) {
-              return (
-                <div>
-                  <img
-                    src={`https://mc-heads.net/head/${staff.username}`}
-                    height="100"
-                  />
-                  <span className="caption">{staff.username}</span>
-                </div>
-              );
-            }
+            if (staff.username === ".darklordbazz") return;
+            if (staff.username === "pearlrebel") return;
+            if (staff.username === "dopey_02") return;
+            if (staff.username === "workedgolem") return;
+            var link = `/${staff.username}`;
+            return (
+              <Route
+                path={link}
+                element={<StaffPage username={staff.username} />}
+              />
+            );
           })}
-        </div>
-        <h1>ADMINS</h1>
-        <div className="admin">
-          {staff.map((staff) => {
-            if (staff.rank.toLowerCase() === "admin") {
-              return (
-                <div>
-                  <img
-                    src={`https://mc-heads.net/head/${staff.username}`}
-                    height="100"
-                  />
-                  <span className="caption">{staff.username}</span>
-                </div>
-              );
-            }
-          })}
-        </div>
-        <h1>SR MODS</h1>
-        <div className="srmod">
-          {staff.map((staff) => {
-            if (staff.rank.toLowerCase() === "srmod") {
-              return (
-                <div>
-                  <img
-                    src={`https://mc-heads.net/head/${staff.username}`}
-                    height="100"
-                  />
-                  <span className="caption">{staff.username}</span>
-                </div>
-              );
-            }
-          })}
-        </div>
-        <h1>MODS</h1>
-        <div className="mod">
-          {staff.map((staff) => {
-            if (staff.rank.toLowerCase() === "mod") {
-              return (
-                <div>
-                  <img
-                    src={`https://mc-heads.net/head/${staff.username}`}
-                    height="90"
-                  />
-                  <span className="caption">{staff.username}</span>
-                </div>
-              );
-            }
-          })}
-        </div>
+        </Routes>
       </div>
     </div>
   );

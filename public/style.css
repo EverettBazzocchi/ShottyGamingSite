@@ -512,25 +512,6 @@ body {
   color: black;
 }
 
-.staffPage {
-  background-color: #303030;
-  text-align: center;
-  border: 1px solid #999999;
-  border-radius: 2px;
-  padding: 0;
-  margin-bottom: 25px;
-}
-
-.staffPage h1 {
-  margin: 0;
-  padding: 15px;
-  height: 40px;
-  background-color: #202020;
-  border-bottom: 0.1px solid #191919;
-  border-top: 0.1px solid #191919;
-  font-family: horta;
-}
-
 .mod,
 .owner,
 .srmod,
@@ -576,4 +557,51 @@ pre {
 #entirePage {
   position: relative;
   min-height: 100vh;
+}
+
+.staffPage {
+  font-family: Helvetica;
+  width: inherit;
+  position: relative;
+  display: inline-block;
+  height: 75vh;
+  border: 1px solid #999999;
+  background-color: #303030;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.staffSideBar {
+  box-sizing: border-box;
+  margin: auto;
+  float: left;
+  width: 249px;
+  height: 75vh;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+	padding:0;
+}
+
+.staffSideBar li {
+  padding: 15px 25px;
+}
+
+.staffSideBarTitle {
+  font-size: 20px;
+  border-bottom: 1px solid #999999;
+  border-top: 1px solid #999999;
+}
+
+.profile {
+  box-sizing: border-box;
+  padding: 25px;
+  top: 0px;
+  position: relative;
+  float: right;
+  width: 999px;
+  height: 75vh;
+  border-left: 1px solid #999999;
+  border-right: 1px solid #999999;
 }
