@@ -6,7 +6,7 @@ The front end site for Shotty Gamings minecraft server website
 
 
 ## Upcoming Features!
-<details><summary> Staff Profiles! </summary>
+<details><summary> Staff Profiles! (Completed)</summary>
 <p>
 
    - Amount of bans/mutes/kicks issued<br>
@@ -17,7 +17,7 @@ The front end site for Shotty Gamings minecraft server website
 </p>
 </details>
   
-<details><summary> Server Profiles! (Completed)</summary>
+<details><summary> Server Profiles!</summary>
 <p>
 
    - Server Status <br>
