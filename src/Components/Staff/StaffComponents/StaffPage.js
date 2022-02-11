@@ -8,8 +8,9 @@ const StaffPage = (props) => {
       `https://api.darklordbazz.com/api/shottyapi/getstaffprofiles?staff=${props.username}`
     ).then((response) => {
       setProfile(response.data[0]);
-    }, []);
-  });
+      console.log(response.data[0])
+    });
+  }, [props.username]);
   return (
     <div className="staffProfile">
       <div className="usernameField">

@@ -693,11 +693,13 @@ legend {
   overflow: hidden;
 }
 .aboutField {
-  width: 550px;;
+  box-sizing: border-box;
+  width: 550px;
   height: 390px;
   float: left;
   left: 50px;
   top:50px;
+  padding: 30px;
 }
 .utimeField, .favservField {
   position: relative;
