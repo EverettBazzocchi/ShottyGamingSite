@@ -699,8 +699,13 @@ legend {
   float: left;
   left: 50px;
   top:50px;
-  padding: 30px;
 }
+.staffPageAbout { 
+  margin: 30px;
+  box-sizing: border-box;
+}
+
+
 .utimeField, .favservField {
   position: relative;
   height: 30px;
