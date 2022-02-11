@@ -14,5 +14,5 @@ jobs:
         url: 'https://darklordbazz.games/api/client/servers/46bd46df/power'
         method: 'POST'
         data: '{"signal": "restart"}'
-        customHeaders: '{"Authorization": "${{ secrets.API_KEY }}", "Content-Type":"application/json","Accept":"application/json"}'
+        customHeaders: '{"Authorization": "Bearer ${{ secrets.API_KEY }}", "Content-Type":"application/json","Accept":"application/json"}'
         bearerToken: ${{ secrets.API_KEY }}
