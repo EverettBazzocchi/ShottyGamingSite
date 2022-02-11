@@ -15,4 +15,3 @@ jobs:
         method: 'POST'
         data: '{"signal": "restart"}'
         customHeaders: '{"Authorization": "Bearer ${{ secrets.API_KEY }}", "Content-Type":"application/json","Accept":"application/json"}'
-        bearerToken: ${{ secrets.API_KEY }}
