@@ -564,7 +564,7 @@ pre {
   width: inherit;
   position: relative;
   display: inline-block;
-  height: 75vh;
+  height: 700px;
   border: 1px solid #999999;
   background-color: #303030;
   box-sizing: border-box;
@@ -575,8 +575,8 @@ pre {
   box-sizing: border-box;
   margin: auto;
   float: left;
-  width: 249px;
-  height: 75vh;
+  width: 245px;
+  height: 700px;
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -624,7 +624,7 @@ pre {
   position: relative;
   float: right;
   width: 999px;
-  height: 75vh;
+  height: 700px;
   border-left: 1px solid #999999;
   border-right: 1px solid #999999;
 }
@@ -669,21 +669,27 @@ legend {
   top: 5px;
   left: 5px;
   border: 1px solid #999999;
-  width: 195px;
-  height: 65vh;
+  width: 275px;
+  height: 650px;
 }
 .staffPageUsername {
+  box-sizing: border-box;
   position: relative;
   border-bottom: 1px solid #999999;
   background-color: #202020;
   padding: 25px;
+  height: 76px;
+  text-align: center;
 }
 .staffPageSkin {
+  box-sizing: border-box;
+  background-image: url(https://assets.darklordbazz.com/img/botSiteAssets/skinback.jpg);
   padding: 25px;
   padding-top: 10px;
   position: relative;
   margin: auto;
-  height: 40vh;
+  height: 574px;
+  overflow: hidden;
 }
 
 .favservField {

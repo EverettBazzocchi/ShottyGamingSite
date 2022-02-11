@@ -8,7 +8,7 @@ const StaffPage = (props) => {
       `https://api.darklordbazz.com/api/shottyapi/getstaffprofiles?staff=${props.username}`
     ).then((response) => {
       setProfile(response.data[0]);
-    });
+    }, []);
   });
   return (
     <div className="staffProfile">
@@ -17,7 +17,7 @@ const StaffPage = (props) => {
         <div className="staffPageSkin">
           <img
             src={`https://mc-heads.net/body/${props.username}`}
-            height="350px"
+            height="550px"
           />
         </div>
       </div>

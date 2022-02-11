@@ -8,14 +8,13 @@ icons.logo = "https://assets.darklordbazz.com/img/shottyAssets/MCIco.png";
 const Minecraft = () => {
   const [minecraft, setMinecraft] = useState([]);
   useEffect(() => {
-    setTimeout(async () => {
-      Axios.get(
-        "https://api.darklordbazz.com/api/shottyapi/mcserver/count/"
-      ).then((response) => {
-        setMinecraft(response.data);
-      });
-    }, 2000);
-  });
+    Axios.get(
+      "https://api.darklordbazz.com/api/shottyapi/mcserver/count/"
+    ).then((response) => {
+      setMinecraft(response.data);
+      console.log(response.data)
+    });
+  }, []);
 
   var player = `1 player online`;
 
