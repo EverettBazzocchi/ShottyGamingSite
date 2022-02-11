@@ -17,7 +17,7 @@ The front end site for Shotty Gamings minecraft server website
 </p>
 </details>
   
-<details><summary> Server Profiles! </summary>
+<details><summary> Server Profiles! (Completed)</summary>
 <p>
 
    - Server Status <br>
