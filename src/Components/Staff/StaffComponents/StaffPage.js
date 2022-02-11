@@ -36,17 +36,19 @@ const StaffPage = (props) => {
             <div className="staffPagemutes">{profile.mutes}</div>
           </fieldset>
         </div>
-        <fieldset className="utimeField">
-          <legend>Joined Staff</legend>
-          <div className="staffPageTime">{profile.timeAsStaff}</div>
-        </fieldset>
+        <div className="timefav">
+          <fieldset className="favservField">
+            <legend>Favorite Server</legend>
+            <div className="staffPageServer">{profile.favServer}</div>
+          </fieldset>
+          <fieldset className="utimeField">
+            <legend>Joined Staff</legend>
+            <div className="staffPageTime">{profile.timeAsStaff}</div>
+          </fieldset>
+        </div>
         <fieldset className="aboutField">
           <legend>About Me</legend>
           <div className="staffPageAbout">{profile.about}</div>
-        </fieldset>
-        <fieldset className="favservField">
-          <legend>Favorite Server</legend>
-          <div className="staffPageServer">{profile.favServer}</div>
         </fieldset>
       </div>
     </div>
