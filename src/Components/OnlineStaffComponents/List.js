@@ -9,7 +9,7 @@ const List = (props) => {
       ).then((response) => {
         setRank(response.data);
       });
-    });
+    }, []);
     return (
         <div className={`rank` + rank}>
             {props.player}

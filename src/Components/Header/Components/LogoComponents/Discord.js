@@ -14,14 +14,13 @@ icons.logoBack =
 const Discord = () => {
   const [discordAPI, setDiscordAPI] = useState([]);
   useEffect(() => {
-    setTimeout(async () => {
       Axios.get(
         "https://discord.com/api/guilds/665323519713738782/widget.json"
       ).then((response) => {
         setDiscordAPI(response.data);
+        console.log(response.data)
       });
-    }, 2000);
-  });
+  }, []);
 
   return (
     <div className="discord">
