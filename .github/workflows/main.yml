@@ -1,0 +1,20 @@
+
+
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy Stage
+      uses: fjogeleit/http-request-action@master
+      with:
+        url: 'https://darklordbazz.games/api/client/servers/46bd46df/power'
+        method: 'POST'
+        data: '{"signal": "restart"}'
+        customHeaders: '{"Authorization": "saAdmcLwJ9JAYEimqs83uYiCl6DBwZeNCsPdynS4Ox20CVW6"}'
