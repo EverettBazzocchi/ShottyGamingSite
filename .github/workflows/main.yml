@@ -14,4 +14,4 @@ jobs:
         url: 'https://darklordbazz.games/api/client/servers/46bd46df/power'
         method: 'POST'
         data: '{"signal": "restart"}'
-        customHeaders: '{"Authorization": "saAdmcLwJ9JAYEimqs83uYiCl6DBwZeNCsPdynS4Ox20CVW6"}'
+        customHeaders: '{"Authorization": ""}'
