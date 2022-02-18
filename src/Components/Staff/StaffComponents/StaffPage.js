@@ -16,6 +16,7 @@ const StaffPage = (props) => {
         <div className="staffPageUsername">{props.username}</div>
         <div className="staffPageSkin">
           <img
+            alt="Staff Members Skin"
             src={`https://mc-heads.net/body/${props.username}`}
             height="550px"
           />

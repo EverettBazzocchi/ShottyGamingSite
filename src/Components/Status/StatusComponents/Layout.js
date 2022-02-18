@@ -37,11 +37,11 @@ const Layout = (props) => {
   if (props.players.includes("offline")) {
     serverNameClass = "offlinename";
   } else serverNameClass = "serverName";
-  if (props.players == "[]" || props.players == "offline" || props.players == "") {
+  if (props.players === "[]" || props.players === "offline" || props.players === "") {
     playerList = "No Staff Online";
   } else
     playerList = props.players.map((players) => {
-      return (< List player={players}/>);
+      return (< List  key={players} player={players}/>);
     });
 
   if (props.players.includes("offline")) {

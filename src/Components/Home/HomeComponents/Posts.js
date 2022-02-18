@@ -26,6 +26,7 @@ const Posts = () => {
       {posts.map((post) => {
         return (
           <PostFormat
+            key={post.author+post.date+post.title}
             title={post.title}
             author={post.author}
             message={post.message}

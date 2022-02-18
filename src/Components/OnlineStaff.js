@@ -4,7 +4,6 @@ import Axios from "axios";
 
 import List from "./OnlineStaffComponents/List";
 
-var playerList;
 const OnlineStaff = () => {
   const [servers, setServers] = useState([]);
   useEffect(() => {
@@ -34,17 +33,17 @@ const OnlineStaff = () => {
           {servers.map((server) => {
             if (
               run < 8 &&
-              (server.players == "[]" || server.players == "offline")
+              (server.players === "[]" || server.players === "offline")
             ) {
               run = run + 1;
               if (run === 8) {
                 run = "nothing";
-                return <div className="staffHomeList">No Staff Online</div>;
+                return <div key={server.id} className="staffHomeList">No Staff Online</div>;
               }
-              return;
+              return null;
             } else {
               return server.players.map((players) => {
-                return <List player={players} />;
+                return <List player={players} key={server.id} />;
               });
             }
           })}

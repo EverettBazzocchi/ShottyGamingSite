@@ -25,6 +25,7 @@ const Status = () => {
       {servers.map((server) => {
         return (
           <Layout
+          key ={server.id}
             name={server.name}
             online={server.count}
             players={server.players}

@@ -31,7 +31,7 @@ const Staff = () => {
           {staff.map((staff) => {
             var link = `/${staff.username}`;
             return (
-              <Route
+              <Route key={staff.username}
                 path={link}
                 element={<StaffPage username={staff.username} />}
               />
