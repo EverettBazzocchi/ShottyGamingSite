@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import Header from "./Components/Header/Header";
@@ -10,7 +10,7 @@ import Status from "./Components/Status/Status";
 import useWindowDimensions from "./hooks/useWindowDimensions";
 
 function App() {
-  const { height, width } = useWindowDimensions();
+  const {width} = useWindowDimensions();
   if (width < 1300) {
     return <div className="UNRES">Unsupported Resolutions</div>;
   } else if (width >= 1300) {

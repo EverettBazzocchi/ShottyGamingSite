@@ -14,6 +14,15 @@ const Staff = () => {
       }
     );
   }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      Axios.get("https://api.darklordbazz.com/api/shottyapi/getstaff").then(
+        (response) => {
+          setStaff(response.data.sort((a, b) => (a.id > b.id ? 1 : -1)));
+        }
+      );
+    }, 3500);
+  }, []);
   return (
     <div className="staffPage">
       <SideBar staff={staff} />
@@ -22,7 +31,7 @@ const Staff = () => {
           {staff.map((staff) => {
             var link = `/${staff.username}`;
             return (
-              <Route
+              <Route key={staff.username}
                 path={link}
                 element={<StaffPage username={staff.username} />}
               />
