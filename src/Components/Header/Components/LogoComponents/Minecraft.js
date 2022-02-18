@@ -21,8 +21,8 @@ const Minecraft = () => {
       ).then((response) => {
         setMinecraft(response.data);
       });
-    }, []);
-  }, 3500);
+    }, 3500);
+  }, []);
   var player = `1 player online`;
 
   if (minecraft.players === "1") {

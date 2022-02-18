@@ -27,8 +27,8 @@ const Discord = () => {
       ).then((response) => {
         setDiscordAPI(response.data);
       });
-    }, []);
-  }, 3500);
+    }, 3500);
+  }, []);
 
   return (
     <div className="discord">

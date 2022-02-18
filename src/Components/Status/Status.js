@@ -18,8 +18,8 @@ const Status = () => {
       ).then((response) => {
         setServers(response.data.sort((a, b) => (a.id > b.id ? 1 : -1)));
       });
-    }, []);
-  }, 3500);
+    }, 3500);
+  }, []);
   return (
     <div className="status">
       {servers.map((server) => {

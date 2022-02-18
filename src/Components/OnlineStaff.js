@@ -21,9 +21,9 @@ const OnlineStaff = () => {
       ).then((response) => {
         setServers(response.data.sort((a, b) => (a.id > b.id ? 1 : -1)));
       });
-    }, []);
-  }, 3500);
-  
+    }, 3500);
+  }, []);
+
   var run = 1;
 
   return (

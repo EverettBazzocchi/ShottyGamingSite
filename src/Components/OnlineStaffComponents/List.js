@@ -17,8 +17,8 @@ const List = (props) => {
       ).then((response) => {
         setRank(response.data);
       });
-    }, []);
-  }, 3500);
+    }, 3500);
+  }, []);
   
   return <div className={`rank` + rank}>{props.player}</div>;
 };
