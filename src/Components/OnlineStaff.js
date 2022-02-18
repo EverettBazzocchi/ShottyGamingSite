@@ -14,7 +14,18 @@ const OnlineStaff = () => {
       setServers(response.data.sort((a, b) => (a.id > b.id ? 1 : -1)));
     });
   });
+  useEffect(() => {
+    setTimeout(() => {
+      Axios.get(
+        "https://api.darklordbazz.com/api/shottyapi/mcserver/playerlist"
+      ).then((response) => {
+        setServers(response.data.sort((a, b) => (a.id > b.id ? 1 : -1)));
+      });
+    }, []);
+  }, 3500);
+  
   var run = 1;
+
   return (
     <div className="onlineStaff">
       <h1>Staff Online</h1>

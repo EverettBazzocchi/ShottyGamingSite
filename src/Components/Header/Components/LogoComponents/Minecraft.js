@@ -14,6 +14,15 @@ const Minecraft = () => {
       setMinecraft(response.data);
     });
   }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      Axios.get(
+        "https://api.darklordbazz.com/api/shottyapi/mcserver/count/"
+      ).then((response) => {
+        setMinecraft(response.data);
+      });
+    }, []);
+  }, 3500);
   var player = `1 player online`;
 
   if (minecraft.players === "1") {

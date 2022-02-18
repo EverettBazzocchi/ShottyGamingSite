@@ -14,13 +14,21 @@ icons.logoBack =
 const Discord = () => {
   const [discordAPI, setDiscordAPI] = useState([]);
   useEffect(() => {
+    Axios.get(
+      "https://discord.com/api/guilds/665323519713738782/widget.json"
+    ).then((response) => {
+      setDiscordAPI(response.data);
+    });
+  }, []);
+  useEffect(() => {
+    setTimeout(() => {
       Axios.get(
         "https://discord.com/api/guilds/665323519713738782/widget.json"
       ).then((response) => {
         setDiscordAPI(response.data);
-        console.log(response.data)
       });
-  }, []);
+    }, []);
+  }, 3500);
 
   return (
     <div className="discord">
@@ -38,10 +46,7 @@ const Discord = () => {
         />
         <span className="discordContent">
           <div className="discordJoin">Join Our Discord!</div>
-
-          <span className="discordCount">
-            {discordAPI.presence_count} Members Online
-          </span>
+          <span className="discordCount">{discordAPI.presence_count} Members Online</span>
         </span>
       </a>
     </div>

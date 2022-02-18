@@ -11,6 +11,15 @@ const Posts = () => {
       }
     );
   }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      Axios.get("https://api.darklordbazz.com/api/shottyapi/getposts").then(
+        (response) => {
+          setPosts(response.data.sort((a, b) => (a.date > b.date ? 1 : -1)));
+        }
+      );
+    }, []);
+  }, 3500);
 
   return (
     <div className="Posts">
