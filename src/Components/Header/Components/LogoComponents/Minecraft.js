@@ -12,10 +12,8 @@ const Minecraft = () => {
       "https://api.darklordbazz.com/api/shottyapi/mcserver/count/"
     ).then((response) => {
       setMinecraft(response.data);
-      console.log(response.data)
     });
   }, []);
-
   var player = `1 player online`;
 
   if (minecraft.players === "1") {
