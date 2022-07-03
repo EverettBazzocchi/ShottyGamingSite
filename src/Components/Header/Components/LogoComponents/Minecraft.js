@@ -1,55 +1,53 @@
 import React, { useState, useEffect } from "react";
-import Axios from "axios";
+import { api } from "../../../../api";
 
 var icons = [];
 
 icons.logo = "https://assets.darklordbazz.com/img/shottyAssets/MCIco.png";
 
 const Minecraft = () => {
-  const [minecraft, setMinecraft] = useState([]);
-  useEffect(() => {
-    Axios.get(
-      "https://api.darklordbazz.com/api/shottyapi/mcserver/count/"
-    ).then((response) => {
-      setMinecraft(response.data);
-    });
-  }, []);
-  useEffect(() => {
-    setTimeout(() => {
-      Axios.get(
-        "https://api.darklordbazz.com/api/shottyapi/mcserver/count/"
-      ).then((response) => {
-        setMinecraft(response.data);
-      });
-    }, 3500);
-  }, []);
-  var player = `1 player online`;
+    const [minecraft, setMinecraft] = useState();
+    useEffect(() => {
+        api.db.servers.then(
+            function (response) {
+                var servers = response.documents;
+                servers.map((server) => {
+                    setMinecraft(server.count + minecraft)
+                })
+            },
+            function (error) {
 
-  if (minecraft.players === "1") {
-    player = `${minecraft.players} player online`;
-  } else if (minecraft.players === "0") {
-    player = `no players online`;
-  } else {
-    player = `${minecraft.players} players online`;
-  }
+            }
+        );
+    }, []);
+    useEffect(() => {}, []);
+    var player = `1 player online`;
 
-  return (
-    <div className="minecraft">
-      <img
-        src={icons.logo}
-        height="100px"
-        alt="Minecraft Icon"
-        className="minecraftIco"
-      />
-      <span className="minecraftContent">
-        <div className="minecraftIP">
-          IP: <b>shotty.tech</b>
+    if (minecraft === "1") {
+        player = `${minecraft} player online`;
+    } else if (minecraft === "0") {
+        player = `no players online`;
+    } else {
+        player = `${minecraft} players online`;
+    }
+
+    return (
+        <div className="minecraft">
+            <img
+                src={icons.logo}
+                height="100px"
+                alt="Minecraft Icon"
+                className="minecraftIco"
+            />
+            <span className="minecraftContent">
+                <div className="minecraftIP">
+                    IP: <b>shotty.tech</b>
+                </div>
+
+                <span className="minecraftCount">{player}</span>
+            </span>
         </div>
-
-        <span className="minecraftCount">{player}</span>
-      </span>
-    </div>
-  );
+    );
 };
 
 export default Minecraft;

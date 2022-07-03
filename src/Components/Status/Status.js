@@ -1,9 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect} from "react";
 import Axios from "axios";
 import Layout from "./StatusComponents/Layout";
 
+import { QueryClient, QueryClientProvider, useQuery } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const queryClient = new QueryClient();
+
 const Status = () => {
-  const [servers, setServers] = useState([]);
+  const [servers, setServers] = useStateIfMounted(0);
   useEffect(() => {
     Axios.get(
       "https://api.darklordbazz.com/api/shottyapi/mcserver/playerlist"

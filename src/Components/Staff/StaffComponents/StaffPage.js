@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect} from "react";
 import Axios from "axios";
 
+import { QueryClient, QueryClientProvider, useQuery } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const queryClient = new QueryClient();
+
 const StaffPage = (props) => {
-  const [profile, setProfile] = useState([]);
+  const [profile, setProfile] = useStateIfMounted(0);
   useEffect(() => {
     Axios.get(
       `https://api.darklordbazz.com/api/shottyapi/getstaffprofiles?staff=${props.username}`
