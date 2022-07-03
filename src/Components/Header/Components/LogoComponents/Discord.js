@@ -1,5 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect} from "react";
 import Axios from "axios";
+
+import { QueryClient, QueryClientProvider, useQuery } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const queryClient = new QueryClient();
 
 var icons = [];
 
@@ -12,7 +17,7 @@ icons.logoBack =
   "https://assets.darklordbazz.com/img/shottyAssets/logo-back.png";
 
 const Discord = () => {
-  const [discordAPI, setDiscordAPI] = useState([]);
+  const [discordAPI, setDiscordAPI] = useStateIfMounted(0);
   useEffect(() => {
     Axios.get(
       "https://discord.com/api/guilds/665323519713738782/widget.json"
