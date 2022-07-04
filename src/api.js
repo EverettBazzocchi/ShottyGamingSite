@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { Client, Account, Databases } from "appwrite";
 
 const client = new Client();
@@ -8,7 +9,7 @@ client.setProject("ShottyGamingAPI");
 export var api;
 //api.account = new Account(client);
 
-const db = new Databases(client, "[DATABASE_ID]");
+const db = new Databases(client, "ShottyGamingDBs");
 
 api.db.staff = db.listDocuments("staffStats");
 api.db.servers = db.listDocuments("62bf0ad0c976f6074871");

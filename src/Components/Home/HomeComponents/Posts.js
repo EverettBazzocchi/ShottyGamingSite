@@ -1,19 +1,19 @@
-import React, {useEffect} from "react";
-import Axios from "axios";
-import PostFormat from "./PostFormat";
-
-import { QueryClient, QueryClientProvider, useQuery } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
-
-const queryClient = new QueryClient();
+import React, {useEffect, useState} from "react";
+import PostFormat from "./PostFormat"
+import { api }from "../../../api";
 
 const Posts = () => {
-  const [posts, setPosts] = useStateIfMounted(0);
+  const [posts, setPosts] = useState();
   useEffect(() => {
-    Axios.get("https://api.darklordbazz.com/api/shottyapi/getposts").then(
-      (response) => {
-        setPosts(response.data.sort((a, b) => (a.date > b.date ? 1 : -1)));
-      }
+    api.db.posts.then(
+        function (response) {
+            var posts = response.documents;
+            setPosts(posts.sort((a, b) => (a.date > b.date ? 1 : -1)));
+
+        },
+        function (error) {
+
+        }
     );
   }, []);
 
