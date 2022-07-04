@@ -9,7 +9,7 @@ client.setProject("ShottyGamingAPI");
 export var api;
 //api.account = new Account(client);
 
-const db = new Databases(client, "ShottyGamingDBs");
+const db = new Databases(client, "ShottyGamingDB");
 
 api.db.staff = db.listDocuments("staffStats");
 api.db.servers = db.listDocuments("62bf0ad0c976f6074871");
