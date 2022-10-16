@@ -11,7 +11,7 @@ const Minecraft = () => {
         api.db.servers.then(
             function (response) {
                 var servers = response.documents;
-                servers.forEach((server) => {
+                servers.map((server) => {
                     setMinecraft(server.count + minecraft)
                 })
             },
@@ -19,7 +19,6 @@ const Minecraft = () => {
 
             }
         );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     useEffect(() => {}, []);
     var player = `1 player online`;
