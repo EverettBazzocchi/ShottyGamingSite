@@ -1,17 +1,12 @@
-import React, {useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { Route, Routes } from "react-router-dom";
-
-import { QueryClient, QueryClientProvider, useQuery } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
-
-const queryClient = new QueryClient();
 
 import SideBar from "./StaffComponents/SideBar";
 import StaffPage from "./StaffComponents/StaffPage";
 
 const Staff = () => {
-  const [staff, setStaff] = useStateIfMounted(0);
+  const [staff, setStaff] = useState([]);
   useEffect(() => {
     Axios.get("https://api.darklordbazz.com/api/shottyapi/getstaff").then(
       (response) => {

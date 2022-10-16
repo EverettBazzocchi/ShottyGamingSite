@@ -1,23 +1,11 @@
-import React, {useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Axios from "axios";
+
 import List from "./OnlineStaffComponents/List";
 
-import { QueryClient, QueryClientProvider, useQuery } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
-
-const queryClient = new QueryClient();
-
-function OnlineStaff() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <Render />
-    </QueryClientProvider>
-  );
-}
-function Render() {
-  /*
-  const [servers, setServers] = useStateIfMounted(0);
+const OnlineStaff = () => {
+  const [servers, setServers] = useState([]);
   useEffect(() => {
     Axios.get(
       "https://api.darklordbazz.com/api/shottyapi/mcserver/playerlist"
@@ -33,19 +21,7 @@ function Render() {
         setServers(response.data.sort((a, b) => (a.id > b.id ? 1 : -1)));
       });
     }, 3500);
-  }, []);*/
-  
-  const { isLoading, error, data: servers, isFetching } = useQuery("repoData", () =>
-    fetch(
-      "https://api.darklordbazz.com/api/shottyapi/mcserver/playerlist"
-    ).then((res) => res.json())
-  );
-
-  if (isLoading) return "Loading...";
-  if (isFetching) return "Loading...";
-
-  if (error) return "An error has occurred: " + error.message;
-
+  }, []);
 
   var run = 1;
 
@@ -56,13 +32,11 @@ function Render() {
         <div className="staffHomeList">
           {servers.map((server) => {
             if (
-              run < 7 &&
+              run < 8 &&
               (server.players === "[]" || server.players === "offline")
             ) {
               run = run + 1;
-              console.log(run)
-              if (run === 7) {
-                console.log(run)
+              if (run === 8) {
                 run = "nothing";
                 return <div key={server.id} className="staffHomeList">No Staff Online</div>;
               }
