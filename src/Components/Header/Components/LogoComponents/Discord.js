@@ -20,15 +20,6 @@ const Discord = () => {
       setDiscordAPI(response.data);
     });
   }, []);
-  useEffect(() => {
-    setTimeout(() => {
-      Axios.get(
-        "https://discord.com/api/guilds/665323519713738782/widget.json"
-      ).then((response) => {
-        setDiscordAPI(response.data);
-      });
-    }, 3500);
-  }, []);
 
   return (
     <div className="discord">

@@ -11,16 +11,6 @@ const List = (props) => {
       setRank(response.data);
     });}
   }, []);
-  useEffect(() => {
-    setTimeout(() => {
-      if (props.player === '[]') {setRank('Null')} else {
-        Axios.get(
-          `https://api.darklordbazz.com/api/shottyapi/getrole?username=${props.player}`
-        ).then((response) => {
-          setRank(response.data);
-        });}
-    }, 3500);
-  });
   
   return <div className={`rank` + rank}>{props.player}</div>;
 };
